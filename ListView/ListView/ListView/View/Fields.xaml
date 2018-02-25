@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListView.View.Fields">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="fieldTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Padding="5">
+                        <Label Text="{Binding Name}"></Label>
+                        <Label Text="{Binding Area}"></Label>
+                    </StackLayout>
+                    <!--<Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Wheat" FontAttributes="Bold" Margin="0" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding Index}" />
+                        <Label VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Chocolate" FontAttributes="Bold" Margin="0" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                        <Label VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" FontAttributes="Italic" Margin="0" Grid.Row="0" Grid.Column="2" Text="{Binding Area}" />
+                        <Label VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Micro" Margin="0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Description}" />
+                    </Grid>-->
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView SeparatorVisibility="Default" x:Name="listView" ItemsSource="{Binding Fields}" ItemTemplate="{StaticResource fieldTemplate}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
